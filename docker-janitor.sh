@@ -13,18 +13,17 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-set -o errexit
-
-# Docker Janitor removed non-running containers, 
+# Docker Janitor removes non-running containers, 
 # orphaned (dangling) images, and images that are 
 # not in use by a running container.
 #
 # Useful for cleaing build systems or just picking up
 # after oneself.
 
+set -o errexit
+
 # This can be changed to use the docker command with extra options, eg:
 # DOCKER=docker --tlsverify ...etc
-
 DOCKER='docker'
 
 # For future versions of docker:
